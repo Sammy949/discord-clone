@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useModal } from "@/hooks/use-modal-store";
 
 import { CreateServerModal } from "@/components/modals/create-server-modal";
 import { InviteModal } from "@/components/modals/invite-modal";
@@ -15,7 +14,6 @@ import { EditChannelModal } from "@/components/modals/edit-channel-modal";
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const { isOpen, type } = useModal();
 
   useEffect(() => {
     setIsMounted(true);
